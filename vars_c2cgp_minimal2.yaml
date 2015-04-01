@@ -2,7 +2,7 @@ extends: CONST_vars.yaml
 
 vars:
     # Database name
-    db: geomapfish
+    db: c2cgp_minimal2
 
     # The visible host name
     host: localhost
