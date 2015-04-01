@@ -175,40 +175,6 @@ Ext.onReady(function() {
         },
 % endif
         {
-            ptype: "cgxp_print",
-            toggleGroup: "maptools",
-            legendPanelId: "legendPanel",
-            featureProvider: "featuresProvider",
-            outputTarget: "center.tbar",
-            printURL: "${request.route_url('printproxy', path='')}",
-            mapserverURL: "${request.route_url('mapserverproxy', path='')}",
-            printProviderConfig: ${dumps(url_role_params)|n},
-            options: {
-                labelAlign: 'top',
-                defaults: {
-                    anchor:'100%'
-                },
-                autoFit: true,
-                fieldsExtraClientConfiguration: {
-                    "A4 portrait": {
-                        "title": {
-                            fieldAttributes: {
-                                fieldLabel: "${_("Name")}",
-                                emptyText: "${_("Name")}"
-                            }
-                        },
-                        "comments": {
-                            useTextArea: true,
-                            fieldAttributes: {
-                                fieldLabel: "${_("Description")}",
-                                emptyText: "${_("Description")}"
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
             ptype: "cgxp_featureswindow",
             id: "featuresProvider",
             themes: THEMES,
